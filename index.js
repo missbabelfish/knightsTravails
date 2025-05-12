@@ -11,14 +11,6 @@ const possibleMoves = [
 
 const onBoard = ([x,y]) => x >= 0 && x <= 7 &&  y >=0 && y <= 7 
 
-// create visited list
-// create steps list
-// visit vertex
-// create discovered list - make sure possible vertex is onBoard
-// pop next vertex off list
-// if not target, 
-// create discovered list of its valid edges
-
 const knightMoves = (start, end) => {
     const positionToString = ([x,y]) => `${x},${y}`;
     const visited = {
@@ -58,23 +50,4 @@ const createPathString = path => {
     console.log(pathString)
 }
 
-
-// levelOrder(cb) {
-//     if (typeof cb !== 'function') throw new Error('please pass a function');
-//     if (this.root === null) return;
-
-//     let queue = [this.root];
-
-//     while (queue.length > 0) {
-//         let currNode = queue[0];
-//         let pass = cb(currNode);
-//         if (!pass) return false;
-//         if (currNode.left) queue.push(currNode.left);
-//         if (currNode.right) queue.push(currNode.right);
-//         queue.shift();
-//     }
-
-//     return true;
-// }
-
-knightMoves([3,3],[4,6])
+// knightMoves([3,3],[4,6])
